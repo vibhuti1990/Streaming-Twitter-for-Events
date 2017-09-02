@@ -90,7 +90,7 @@ if __name__ == '__main__':
     auth = OAuthHandler(config.consumer_key, config.consumer_secret)
     auth.set_access_token(config.access_token, config.access_secret)
     api = tweepy.API(auth)
-
+# run from command prommp ||||||python twitter_stream_download.py -q cricket(replace this with any term you want to search) -d data
     twitter_stream = Stream(auth, MyListener(args.data_dir, args.query))
     twitter_stream.filter(track=[args.query])
 
